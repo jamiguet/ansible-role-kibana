@@ -1,5 +1,5 @@
 ---
-- name: Ensure dependency is installed (Ubuntu).
+- name: Ensure depdency is installed (Ubuntu).
   apt: name=apt-transport-https state=present
 
 - name: Add Elasticsearch apt key.
@@ -9,6 +9,9 @@
 
 - name: Add Kibana repository.
   apt_repository:
-    repo: 'deb https://artifacts.elastic.co/kibana/6.x/apt stable main'
+    repo: 'deb https://artifacts.elastic.co/packages/6.x/apt stable main'
     state: present
     update_cache: yes
+
+
+   
